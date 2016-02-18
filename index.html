@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/main.css">
+  <title></title>
+</head>
+<body>
+    <nav>
+      <button id="menu-button">&#9776</button>
+      <ul>
+        <li class="current"><a href="#intro">Introduction</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li class="submenu"><a href ="#blog">Blog</a>
+            <ul>
+              <li><a href="#">Blog Post 1</a></li>
+              <li><a href="#">Blog Post 2</a></li>
+              <li><a href="#">Blog Post 3</a></li>
+              <li><a href="#">Blog Post 4</a></li>
+            </ul>
+        </li>
+      </ul>
+    </nav>
+    <div id="logo">
+     <img src="img/logo2.jpeg" alt="TLH logo"/>
+    </div>
+    <section id="intro">
+        <h1>Introduction</h1>
+        <p>
+        Artisanal filler text for your site or project.
+        Ennui marfa occupy pabst pug man bun fixie, four dollar toast PBR&B 8-bit try-hard man braid offal wolf. Try-hard chillwave cardigan, helvetica heirloom street art cliche. Blue bottle offal fixie venmo, yr waistcoat mlkshk +1 fashion axe gluten-free bitters aesthetic neutra. IPhone williamsburg lomo kinfolk everyday carry, narwhal humblebrag sriracha schlitz fanny pack. Trust fund kale chips waistcoat cold-pressed, etsy blue bottle man braid venmo cornhole deep v. Vice stumptown YOLO, tofu bespoke brooklyn man braid yr fanny pack. Post-ironic franzen whatever, cray tote bag leggings ennui four dollar toast vegan skateboard cred.
+        </p>
+    </section>
+    <section id="about">
+       <h1>About</h1>
+       <p>
+        Cronut tacos leggings, YOLO polaroid listicle salvia banjo four dollar toast tote bag you probably haven't heard of them cold-pressed knausgaard williamsburg swag. Sartorial kale chips next level, flannel tattooed echo park affogato intelligentsia aesthetic ethical pork belly PBR&B disrupt +1. Pabst paleo master cleanse, jean shorts blue bottle roof party selfies marfa DIY meh green juice. Four dollar toast try-hard lomo, yr roof party asymmetrical man bun cronut. Godard tofu vice organic deep v, iPhone tilde next level twee fashion axe art party ethical. Biodiesel ugh etsy chillwave, meh keffiyeh yr sustainable everyday carry retro green juice pour-over. Sustainable tumblr pour-over 3 wolf moon DIY, butcher skateboard.
+      </p>
+  </section>
+  <section id ="portfolio">
+     <h1>Portfolio</h1>
+     <p>
+        Kitsch vegan tofu four loko fap. Pug kale chips messenger bag selfies. Flannel humblebrag VHS pinterest, single-origin coffee cold-pressed tofu fap meditation taxidermy four loko typewriter vinyl. Migas authentic truffaut banh mi knausgaard food truck. Bitters pitchfork tattooed, hella listicle beard seitan meggings artisan hashtag man bun affogato cred quinoa. Try-hard humblebrag thundercats truffaut cred trust fund. Taxidermy jean shorts lumbersexual poutine, street art banjo church-key bespoke thundercats portland swag artisan bushwick biodiesel.
+      </p>
+      </section>
+  <section id ="contact">
+  <h1>Contact</h1>
+  <p>
+      Slow-carb man braid brooklyn forage waistcoat hashtag locavore, four dollar toast franzen food truck schlitz vice. Marfa YOLO XOXO asymmetrical fap. Chartreuse fanny pack thundercats wolf, tattooed chillwave XOXO shabby chic church-key asymmetrical pork belly 3 wolf moon sustainable four loko. Schlitz celiac portland jean shorts before they sold out, four loko slow-carb helvetica truffaut cred affogato keytar. Hoodie paleo artisan, brooklyn flexitarian fap microdosing hashtag portland iPhone post-ironic hella sriracha YOLO pop-up. Ramps celiac bespoke, kogi 3 wolf moon echo park biodiesel helvetica meditation. Wolf pitchfork crucifix, normcore man bun banjo butcher kombucha chambray 90's tacos drinking vinegar vice.
+      Oh. You need a little dummy text for your mockup? How quaint.
+  </p>
+    </section>
+    <section id="blank"></section>
+
+
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="js/jquery.nav.js"></script>
+    <script>
+
+        $('nav').onePageNav({
+          scrollThreshold: 0.4,
+          navItems:'a:not(.submenu a)'
+         });
+
+        function toggleNav() {
+          $('nav ul').slideToggle();
+        }
+
+        $('#menu-button').click(toggleNav);
+
+        function windowResized() {
+          var width = $(window).width();
+          var menu = $('nav ul');
+
+          if (width > 768 && menu.is(':hidden')) {
+              menu.removeAttr('style');
+          }
+        }
+
+        $(window).resize(windowResized);
+    </script>
+</body>
+</html>
+
+
